@@ -1,0 +1,157 @@
+/*@font-face {
+	font-family: concertOne;
+	src(url)
+}*/
+
+body {
+	margin: 0;
+}
+
+.bar  { position: absolute;
+		bottom: 0;
+		width: 100%; }
+.hero {grid-area: divid;
+		background-image: linear-gradient( 135deg, #FEB692 10%, #EA5455 100%);
+		height: calc(50vh);
+		position: relative;}
+.torso {grid-area: bottom;
+		background-color: #FFF;
+		object-fit: fit;}
+
+.grid-container {
+	display: grid;
+	grid-template-areas:
+		'divid'
+		'bottom';
+	height: 100vh;
+	grid-template-rows: 50% 50%;
+}
+
+.division-bar {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	filter: drop-shadow(0 -0.2vw 1vw rgba(0, 0, 0, 0.4));
+	z-index: 1;
+}
+
+.rectangle { /*Covers a line between the division bar and the body introduced with some aspect ratios*/
+	width: 100%;
+	height: 6vw;
+	background-color: #FFF;
+	position: absolute;
+	bottom: -4vw;
+	left: 0;
+	z-index: 2;
+}
+
+.clock {
+	display: grid;
+	grid-template-areas:
+		'. hr colon1 min colon2 sec .';
+	height: 15vh;
+	grid-template-columns: 1fr 20vh 8vh auto 8vh 20vh 1fr;
+	justify-content: center;
+}
+
+#hr {
+	grid-area: hr;
+	justify-self: right;
+	text-align: center;
+}
+
+#colon1 {
+	grid-area: colon1;
+	justify-self: center;
+	text-align: center;
+}
+
+#min {
+	grid-area: min;
+	justify-self: center;
+	text-align: center;
+}
+
+#colon2 {
+	grid-area: colon2;
+	justify-self: center;
+	text-align: center;
+}
+
+#sec {
+	grid-area: sec;
+	justify-self: left;
+	text-align: center;
+}
+
+h1 {
+	font-family: 'Baloo Tammudu';
+	font-size: 15vh;
+	font-weight: normal;
+	color: #EEE;
+	filter: drop-shadow(0 0 0.5vh rgba(0, 0, 0, 0.4));
+}
+
+.apps {
+	display: grid;
+	grid-template-areas:
+		'. app1 app2 app3 app4 app5 app6 .';
+	height: 10vh;
+	grid-template-columns: 1fr 10vh 10vh 10vh 10vh 10vh 10vh 1fr;
+	justify-content: center;
+	align-content: center;
+	grid-gap: 5vh;
+	margin-top: -5vw;
+}
+
+.appIcon {
+	height: 10vh;
+	width: 10vh;
+	background-color: #000;
+	border-radius: 50%;
+	filter: drop-shadow(0 0.5vh 0.5vh rgba(0, 0, 0, 0.4));
+	z-index: 0;
+	padding-top: calc();
+}
+
+#app1 {
+	grid-area: app1;
+	margin-top: -7.5vw;
+	/*background-color: #ABDCFF;*/
+	background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+}
+
+#app2 {
+	grid-area: app2;
+	margin-top: -6.0vw;
+	/*background-color: #90F7EC;*/
+	background-image: linear-gradient( 135deg, #90F7EC 10%, #32CCBC 100%);
+}
+
+#app3 {
+	grid-area: app3;
+	margin-top: -5.3vw;
+	/*background-color: #81FBB8;*/
+	background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
+}
+
+#app4 {
+	grid-area: app4;
+	margin-top: -5.3vw;
+	/*background-color: #FFAA85;*/
+	background-image: linear-gradient( 135deg, #FFAA85 10%, #B3315F 100%);
+}
+
+#app5 {
+	grid-area: app5;
+	margin-top: -6.0vw;
+	/*background-color: #FCCF31;*/
+	background-image: linear-gradient( 135deg, #FCCF31 10%, #F55555 100%);
+}
+
+#app6 {
+	grid-area: app6;
+	margin-top: -7.5vw;
+	/*background-color: #FDEB71;*/
+	background-image: linear-gradient( 135deg, #FDEB71 10%, #F8D800 100%);
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="scripts.js"></script>
+	<script type="text/javascript" src="http://livejs.com/live.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
+</head>
+
+<body onload="startTime()">
+<div class="grid-container">
+	<div class="hero">
+		<div class="clock">
+			<h1 id="hr"></h1>
+			<h1 id="colon1">:</h1>
+			<h1 id="min"></h1>
+			<h1 id="colon2">:</h1>
+			<h1 id="sec"></h1>
+		</div>
+		<div class="bar">
+    		<div class="rectangle"></div>
+			<svg class="division-bar" width="100%" height="auto" viewBox="0 0 1900 260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<defs>
+					<linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+						<stop offset="10%" style="stop-color:#ABDCFF;stop-opacity:1" />
+						<stop offset="100%" style="stop-color:#0396FF;stop-opacity:1" />
+					</linearGradient>
+					<linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+						<stop offset="10%" style="stop-color:#90F7EC;stop-opacity:1" />
+						<stop offset="100%" style="stop-color:#32CCBC;stop-opacity:1" />
+					</linearGradient>
+					<linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+						<stop offset="10%" style="stop-color:#81FBB8;stop-opacity:1" />
+						<stop offset="100%" style="stop-color:#28C76F;stop-opacity:1" />
+					</linearGradient>
+					<linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+						<stop offset="10%" style="stop-color:#FFAA85;stop-opacity:1" />
+						<stop offset="100%" style="stop-color:#B3315F;stop-opacity:1" />
+					</linearGradient>
+					<linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+						<stop offset="10%" style="stop-color:#FCCF31;stop-opacity:1" />
+						<stop offset="100%" style="stop-color:#F55555;stop-opacity:1" />
+					</linearGradient>
+					<linearGradient id="grad6" x1="0%" y1="0%" x2="100%" y2="100%">
+						<stop offset="10%" style="stop-color:#FDEB71;stop-opacity:1" />
+						<stop offset="100%" style="stop-color:#F8D800;stop-opacity:1" />
+					</linearGradient>
+				</defs>
+    	    	<circle cx="200" cy="148" r="100" fill="url(#grad1)" />
+    	    	<circle cx="500" cy="190" r="100" fill="url(#grad2)" />
+    	    	<circle cx="800" cy="211" r="100" fill="url(#grad3)" />
+    	    	<circle cx="1100" cy="211" r="100" fill="url(#grad4)" />
+    	    	<circle cx="1400" cy="190" r="100" fill="url(#grad5)" />
+    	    	<circle cx="1700" cy="148" r="100" fill="url(#grad6)" />
+        		<g id="division-bar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    	    	   <path d="M0,110 C570,220 1530,220 1900,110 L1900,260 0,260 0,110 Z" fill="#FFFFFF"></path>
+	        	</g>
+    		</svg>
+    	</div>
+	</div>
+    <div class="torso">
+    	<div class="apps">
+    		<!-- <svg class="appIcon" id="app1" width="100%" "height=auto">
+    			<circle r="40%" stroke="black" stroke-width="3" fill="red" />
+    		</svg> -->
+    		 <!-- <div class="appIcon" id="app1"></div>
+    		 <div class="appIcon" id="app2"></div>
+    		 <div class="appIcon" id="app3"></div>
+    		 <div class="appIcon" id="app4"></div>
+    		 <div class="appIcon" id="app5"></div>
+    		 <div class="appIcon" id="app6"></div> -->
+    	</div>
+    </div>
+</div>
+</body>
+</html>
