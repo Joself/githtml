@@ -1,0 +1,384 @@
+body {
+	margin: 0;
+	background-image: url('Wallpaper 4.jpg');
+	background-size: 100% 100%;
+	user-select: none;
+	padding: 2.5vh calc(50vw - 20vh) 2.5vh calc(50vw - 20vh);
+	font-family: Varela Round;
+}
+
+.vertical {
+	display: grid;
+	grid-template-rows: 6.25vh 5vh 17.5vh 12.5vh 48.75vh;
+	grid-row-gap: 1.25vh;
+}
+
+.vertical > div {
+	background: #3E494F;
+	width: 40vh;
+	box-shadow: 0 0.2vh 0.2vh rgba(0, 0, 0, 0.25);
+	border-radius: 1.25vh;
+}
+
+#clock {
+	position: relative;
+	top: -4.9vh;
+	font-size: 5vh;
+	color: white;
+	text-align: center;
+	-webkit-text-stroke: 0.1vh white;
+}
+
+.i3grid {
+	display: grid;
+	grid-template-columns: repeat(3, 12.5vh);
+	grid-column-gap: 1.25vh;
+	background: none !important;
+	box-shadow: none !important;
+}
+
+.i3grid > div {
+	display: grid;
+}
+
+#left {
+	grid-template-columns: 1fr 1fr;
+}
+
+#middle {
+	grid-template-columns: 1fr 1fr;
+}
+
+#right {
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.workspace.selected {
+	background: #3E494F;
+	z-index: 1;
+}
+
+.workspace {
+	display: grid;
+	grid-template-rows: 1.875vh 3.125vh;
+	box-shadow: 0 0.2vh 0.2vh rgba(0, 0, 0, 0.25);
+	background: #2A3136;
+}
+
+.workspace:first-child {
+	border-radius: 1.25vh 0 0 1.25vh;
+}
+
+.workspace:last-child {
+	border-radius: 0 1.25vh 1.25vh 0;
+}
+
+.workspace > p {
+	position: relative;
+	top: -0.9375vh;
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 1.25vh;
+	height: 1.25vh;
+	text-align: center;
+}
+
+.workspace > div {
+	display: grid;
+}
+
+.workspace > div > i {
+	color: rgba(255, 255, 255, 0.25);
+	font-size: 1.5625vh;
+	height: 1.5625vh;
+}
+
+#tempSingle {
+	position: relative;
+	top: 0.78125vh;
+	text-align: center;
+}
+
+#tempTwo {
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 1vh;
+	position: relative;
+	top: 0.78125vh;
+}
+
+#right > div > #tempTwo {
+	grid-column-gap: 0.5vh;
+}
+
+#tempTwo > i:first-child {
+	text-align: right;
+}
+
+#tempTwo > i:last-child {
+	text-align: left;
+}
+
+#tempThree {
+	grid-template-areas:
+		'a a'
+		'b c';
+	grid-template-rows: 0.78125vh;
+	grid-row-gap: 0.35vh;
+	grid-column-gap: 0.675vh;
+	position: relative;
+	top: 0.625vh;
+}
+
+#tempFour {
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 0.78125vh;
+	grid-row-gap: 0.35vh;
+	grid-column-gap: 0.675vh;
+	position: relative;
+	top: 0.625vh;
+}
+
+#tempThree > i, #tempFour > i {
+	font-size: 0.78125vh !important;
+}
+
+.flashcards {
+	display: grid;
+	grid-template-areas:
+		'a a b c c'
+		'j d e f k'
+		'g g h i i';
+	grid-column-gap: 1.25vh;
+	grid-row-gap: 1.25vh;
+	grid-template-rows: 5vh 5vh 5vh;
+	font-size: 1.875vh;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.flash {
+	display: flex;
+}
+
+.flash > div > p {
+	position: relative;
+	top: -0.6875vh;
+}
+
+#f1, #f2, #f3, #f5 #f7, #f8, #f9 {
+	width: 12.5vh;
+}
+
+#f4, #f6 {
+	width: 8.75vh;
+}
+
+#f1, #f4, #f7 {
+	justify-content: flex-end;
+}
+
+#f2, #f5, #f8 {
+	justify-content: center;
+}
+
+#f7, #f8, #f9 {
+	margin-top: -0.5vh;
+}
+
+.progBar {
+	position: relative;
+	top: -2.45vh;
+	background: rgba(255, 255, 255, 0.5);
+	height: 0.3125vh;
+	border-radius: 0.6vh;
+	opacity: 0.5;
+}
+
+.progBar > div {
+	background: rgba(221, 115, 115, 1);
+	height: 0.3125vh;
+	width: 20px;
+	border-radius: 0.6vh;
+}
+
+.arrow {
+	position: relative;
+	top: 1.25vh;
+	width: 2.5vh;
+	height: 2.5vh;
+	fill: rgba(255, 255, 255, 0.1);
+}
+
+#leftArrow {
+	left: 1.25vh;
+}
+
+
+
+.music {
+	display: grid;
+	grid-template-columns: 12.5vh 27.5vh;
+}
+
+.album {
+	position: relative;
+}
+
+	#imgVisible {
+		position: absolute;
+		top: 1.25vh;
+		right: 0.625vh;
+		border-radius: 50%;
+		height: 10vh;
+		width: 10vh;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+		z-index: 1;
+	}
+
+	#imgBlur {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		border-radius: 50%;
+		height: 11.25vh;
+		width: 11.25vh;
+		opacity: 0.3;
+		filter: blur(2.5vh);
+		transform: matrix(-1, 0, 0, 1, 0, 0);
+		animation: none;
+	}
+
+.notAlbum {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	margin: 2.5vh 0 1.25vh 0;
+}
+
+.songInfo {
+	font-size: 1.25vh;
+	height: 2.5vh;
+	text-align: center;
+}
+
+	#songName {
+		color: rgba(255, 255, 255, 0.75);
+		margin: 0 0 0 0;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+	#artistName {
+		color: rgba(255, 255, 255, 0.5);
+		margin: 0 0 0 0;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+.control {
+	position: relative;
+	margin: 0.9375vh 0 1.5625vh;
+	left: 8.4375vh;
+	display: flex;
+	width: 10.625vh;
+	height: 2.5vh;
+	justify-content: center;
+}
+
+.play {
+	position: relative;
+	transition: 0.2s ease-in-out;
+}
+
+.play:hover {
+	transform: translate(0, -2%);
+}
+
+	#playLeft {
+		position: relative;
+		right: 0.625vh;
+		width: 0.625vh;
+		height: 2.5vh;
+		background-color: rgba(255, 255, 255, 0.5);
+		border-radius: 0.3125vh;
+	}
+
+	#playRight {
+		position: relative;
+		top: -2.5vh;
+		left: 0.625vh;
+		width: 0.625vh;
+		height: 2.5vh;
+		background-color: rgba(255, 255, 255, 0.5);
+		border-radius: 0.3125vh;
+	}
+
+	#prev {
+		position: relative;
+		top: 0.825vh;
+		right: 3.75vh;
+		transform: rotate(-90deg);
+		fill: rgba(255, 255, 255, 0.5);
+		width: 1.5vh;
+		height: 0.75vh;
+		transition: 0.2s ease-in-out;
+	}
+
+	#prev:hover {
+	transform: translate(0, -2%);
+	transform: rotate(-90deg);
+	}
+
+	#next {
+		position: relative;
+		top: 0.825vh;
+		left: 3.75vh;
+		transform: rotate(90deg);
+		fill: rgba(255, 255, 255, 0.5);
+		width: 1.5vh;
+		height: 0.75vh;
+		transition: 0.2s ease-in-out;
+	}
+
+	#next:hover {
+	transform: translate(0, -2%);
+	transform: rotate(90deg);
+	}
+
+.seek {
+	display: flex;
+	height: 0.625vh;
+	position: relative;
+	font-size: 0.9375vh;
+	color: rgba(255, 255, 255, 0.75);
+	justify-content: center;
+	align-items: center; 
+}
+
+	#passed {
+		text-align: right;
+	}
+
+#seekBackground {
+	background-color: rgba(255, 255, 255, 0.5);
+	width: 18.75vh;
+	height: 0.625vh;
+	border-radius: 0.625vh;
+	margin: 0 0.625vh 0;
+}
+
+	#seekForeground {
+		position: relative;
+		left: -0.03vh; /*Cover some pixels from the background of the bar*/
+		background-color: #DD7373;
+		width: 10vh;
+		height: 100%;
+		border-radius: 0.625vh;
+	}
+
+
+
+@keyframes fadein {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}

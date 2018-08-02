@@ -1,0 +1,129 @@
+body {
+	margin: 0;
+	background-color: #000;
+}
+
+.gridContainer {
+	display: grid;
+	height: 100vh;
+	grid-template-rows: 34vh 66vh;
+	background-color: #FFF;
+}
+
+.top {
+	display: grid;
+	grid-template-rows: 80% 20%;
+	font-family: Varela Round;
+	text-align: center;
+}
+
+.time {
+	height: 22.975vh;
+	background-image: linear-gradient(to bottom right, #C16666, #EB5757);
+	box-shadow: inset 0px -4px 4px rgba(0, 0, 0, 0.25);
+	text-align: center;
+	letter-spacing: 0.05em;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	color: #FFF;
+	padding-top: 4.225vh;
+	-moz-user-select: none; /*Firefox only*/
+}
+
+.clock {
+	height: 7.5vh;
+	width: 100%;
+	display: grid;
+	grid-template-areas: '. hr colon min .';
+	grid-template-columns: 1fr 1fr 3vh 1fr 1fr;
+	font-size: 7.5vh;
+	-webkit-text-stroke: 3px #FFF;
+	margin: 0 0 0 0;
+	line-height: 0;
+	animation: fadein 1s;
+}
+
+	#hr {
+		grid-area: hr;
+		justify-self: right;
+	}
+
+	#colon {
+		grid-area: colon;
+	}
+
+	#min {
+		grid-area: min;
+		justify-self: left;
+	}
+
+#date {
+	font-size: 3.75vh;
+	-webkit-text-stroke: 1px #FFF;
+	animation: fadein 1s;
+
+}
+
+.music {
+	display: grid;
+	grid-template-columns: 20% 80%;
+	background:
+		linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+		linear-gradient(to bottom right, #C16666, #EB5757);
+}
+
+.album {
+	position: relative;
+	animation: fadein 1s;
+}
+
+	#imgVisible {
+		border-radius: 50%;
+		height: 9vh;
+		position: absolute;
+		right: 0;
+		bottom: 0.75vh;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+	}
+
+	#imgBlur {
+		border-radius: 50%;
+		height: 9.75vh;
+		position: absolute;
+		right: -0.375vh;
+		bottom: 0.375vh;
+		opacity: 0.3;
+		filter: blur(2.5vh);
+		transform: matrix(-1, 0, 0, 1, 0, 0);
+	}
+
+.songInfo {
+	height: 100%;
+	font-size: 2vh;
+	line-height: 2.5vh;
+	letter-spacing: 0.05em;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	padding-top: 1.5%;
+	animation: fadein 1s;
+}
+
+	#songName {
+		color: rgba(251, 251, 251, 0.75);
+		-webkit-text-stroke: 1px rgba(251, 251, 251, 0.75);
+		margin: 0 0 0 0;
+	}
+
+	#artistName {
+		color: rgba(251, 251, 251, 0.5);
+		-webkit-text-stroke: 0.5px rgba(251, 251, 251, 0.5);
+		margin: 0 0 0 0;
+	}
+
+.calView {
+	background: #F2F2F2;
+	box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes fadein {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}

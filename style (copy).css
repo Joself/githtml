@@ -1,0 +1,253 @@
+body {
+	margin: 0;
+	background-color: #000;
+	user-select: none;
+}
+
+.gridContainer {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 20vw 80vw;
+	background-color: #FFF8F8;
+}
+
+.sidebar {
+	display: grid;
+	grid-template-rows: 84% 15% 1%;
+	font-family: Varela Round;
+	text-align: center;
+	background-image: linear-gradient(to bottom right, #C16666, #EB5757);
+	box-shadow: inset 0px -4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sidebar * {
+	animation: fadein 1s;
+}
+
+.time {
+	height: 5vw;
+	text-align: center;
+	letter-spacing: 0.05em;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	color: #FFF8F8;
+	-moz-user-select: none; /*Firefox only*/
+}
+
+.clock {
+	height: 5vw;
+	width: 100%;
+	display: grid;
+	grid-template-areas: '. hr colon min .';
+	grid-template-columns: 1fr 1fr 2vw 1fr 1fr;
+	font-size: 5vw;
+	-webkit-text-stroke: 1px #FFF8F8;
+	margin: -1vw 0.5vw 0 0;
+	line-height: 0;
+}
+
+	#hr {
+		grid-area: hr;
+		justify-self: right;
+	}
+
+	#colon {
+		grid-area: colon;
+	}
+
+	#min {
+		grid-area: min;
+		justify-self: left;
+	}
+
+#date {
+	font-size: 2.5vw;
+	-webkit-text-stroke: 1px #FFF;
+
+}
+
+.music {
+	display: grid;
+	grid-template-rows: 65% 10% 10% 15%;
+}
+
+.album {
+	position: relative;
+}
+
+	#imgVisible {
+		position: absolute;
+		top: calc((100% - 15vw) / 2);
+		left: 2.5vw;
+		border-radius: 50%;
+		height: 15vw;
+		width: 15vw;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+	}
+
+	#imgBlur {
+		position: absolute;
+		top: calc((100% - 16.4vw) / 2);
+		left: 1.8vw;
+		border-radius: 50%;
+		height: 16.4vw;
+		width: 16.4vw;
+		opacity: 0.3;
+		filter: blur(2.5vh);
+		transform: matrix(-1, 0, 0, 1, 0, 0);
+		animation: none;
+	}
+
+.songInfo {
+	height: 100%;
+	width: 19vw;
+	font-size: 1.3vw;
+	line-height: 1.5vw;
+	letter-spacing: 0.05em;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	justify-self: center;
+}
+
+	#songName {
+		color: #FFF8F8;
+		-webkit-text-stroke: 1px #FFF8F8;
+		margin: 0 0 0 0;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+	#artistName {
+		color: #E5DFDF;
+		-webkit-text-stroke: 0.5px #E5DFDF;
+		margin: 0 0 0 0;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+.seek {
+	display: grid;
+	position: relative;
+	grid-template-areas: '. passed seekBar total .';
+	grid-template-columns: 1fr 1fr 12vw 1fr 1fr;
+	font-size: 1vw;
+	color: #FFF8F8;
+}
+
+	#passed {
+		margin-top: 48%;
+		grid-area: passed;
+		text-align: right;
+	}
+
+	#total {
+		margin-top: 48%;
+		grid-area: total;
+	}
+
+.seekBar {
+	grid-area: seekBar;
+	position: relative;
+}
+
+	#seekBackground {
+		position: absolute;
+		top: 44%;
+		left: calc((100% - 10.68vw) / 2);
+		background-color: #FFF8F8;
+		width: 10.68vw;
+		height: 0.3vw;
+		border-radius: 2vw;
+	}
+
+	#seekForeground {
+		position: absolute;
+		top: 44%;
+		left: calc((100% - 10.68vw) / 2 - 1%);
+		background-color: #496DDB;
+		width: 0;
+		height: 0.3vw;
+		border-radius: 2vw;
+	}
+
+.control {
+	position: relative;
+	display: grid;
+	grid-template-areas: '. prev play next .';
+	grid-template-columns: 1fr 1fr 4vw 1fr 1fr;
+}
+
+.play {
+	position: relative;
+	grid-area: play;
+	transition: 0.2s ease-in-out;
+}
+
+.play:hover {
+	transform: translate(0, -2%);
+}
+
+	#left {
+		position: absolute;
+		top: calc((100% - 2.4vw) / 2);
+		left: 1.1vw;
+		width: 0.6vw;
+		height: 2.4vw;
+		background-color: #FFF8F8;
+		border-radius: 0.3vw;
+	}
+
+	#right {
+		position: absolute;
+		top: calc((100% - 2.4vw) / 2);
+		right: 1.1vw;
+		width: 0.6vw;
+		height: 2.4vw;
+		background-color: #FFF8F8;
+		border-radius: 0.3vw;
+	}
+
+	#prev {
+		position: absolute;
+		right: 25%;
+		top: 37.5%;
+		grid-area: prev;
+		transform: rotate(-90deg);
+		fill: #FFF8F8;
+		width: 25%;
+		height: 25%;
+		justify-self: right;
+		transition: 0.2s ease-in-out;
+	}
+
+	#prev:hover {
+	transform: translate(0, -2%);
+	transform: rotate(-90deg);
+	}
+
+	#next {
+		position: absolute;
+		left: 25%;
+		top: 37.5%;
+		grid-area: next;
+		transform: rotate(90deg);
+		fill: #FFF8F8;
+		width: 25%;
+		height: 25%;
+		transition: 0.2s ease-in-out;
+	}
+
+	#next:hover {
+	transform: translate(0, -2%);
+	transform: rotate(90deg);
+	}
+
+.calView {
+	background: #F2F2F2;
+	box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes fadein {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}

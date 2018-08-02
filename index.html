@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<script src='newscripts.js'></script>
+</head>
+
+<body onload='progress()' onresize='progress()'>
+	<div class='vertical'>
+		<div class='clock'>
+			<p id='clock'>15:20</p>
+		</div>
+
+		<div class='i3grid'>
+			<div id='left'>
+				<div id='left1' class='workspace selected'>
+					<p>3</p>
+					<div id=tempSingle>
+						<i class="fas fa-edit"></i>
+					</div>
+				</div>
+				<div id='left2'	class='workspace'>
+					<p>6</p>
+					<div id=tempFour>
+						<i class="fas fa-terminal" style='text-align: right;'></i>
+						<i class="fas fa-terminal" style='text-align: left;'></i>
+						<i class="fas fa-terminal" style='text-align: right;'></i>
+						<i class="fas fa-ellipsis-h" style='text-align: left;'></i>
+					</div>
+				</div>
+			</div>
+			<div id='middle'>
+				<div id='middle1' class='workspace selected'>
+					<p>1</p>
+					<div id=tempTwo>
+						<i class="fas fa-file-code"></i>
+						<i class="fas fa-terminal"></i>
+					</div>
+				</div>
+				<div id='middle2' class='workspace'>
+					<p>4</p>
+					<div id=tempTwo>
+						<i class="fas fa-paint-brush"></i>
+						<i class="fas fa-cube"></i>
+					</div>
+				</div>
+			</div>
+			<div id='right'>
+				<div id='right1' class='workspace selected'>
+					<p>2</p>
+					<div id=tempThree>
+						<i class="fab fa-firefox" style='grid-area: a; text-align: center;'></i>
+						<i class="fas fa-folder" style='grid-area: b; text-align: right;'></i>
+						<i class="fab fa-steam" style='grid-area: c; text-align: left;'></i>
+					</div>
+				</div>
+				<div id='right2' class='workspace'>
+					<p>5</p>
+					<div id=tempTwo>
+						<i class="fab fa-facebook-messenger"></i>
+						<i class="fab fa-discord"></i>
+					</div>
+				</div>
+				<div id='right3' class='workspace'>
+					<p>10</p>
+					<div id=tempSingle>
+						<i class="fab fa-spotify"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class='flashcards'>
+			<div id='f1' class='flash' style='grid-area: a;'>
+				<div id='g1'>
+					<p>Integrals</p>
+					<div class='progBar'>
+						<div></div>
+					</div>
+				</div>
+			</div>
+			<div id='f2' class='flash' style='grid-area: b;'>
+				<div id='g2'>
+					<p>Countries</p>
+					<div class='progBar'>
+						<div></div>
+					</div>
+				</div>
+			</div>
+			<div id='f3' class='flash' style='grid-area: c;'>
+				<div id='g3'>
+					<p>Capitals</p>
+					<div class='progBar'>
+						<div></div>
+					</div>
+				</div>
+			</div>
+			<div id='leftArrow' class='arrow' style='grid-area: j;'>
+				<svg xmlns="http://www.w3.org/2000/svg" width="0.244444in" height="0.511111in" viewBox="0 -1 22 47">
+					<path
+					d=	"M 1.82,25.34
+						C 0.71,23.67 0.71,21.50 1.82,19.83
+						1.82,19.83 13.64,1.92 13.64,1.92
+						14.43,0.72 15.77,-0.00 17.20,-0.00
+						17.20,-0.00 17.20,-0.00 17.20,-0.00
+						20.58,-0.00 22.62,3.73 20.80,6.58
+						20.80,6.58 12.27,19.89 12.27,19.89
+						11.22,21.54 11.22,23.64 12.27,25.28
+						12.27,25.28 20.80,38.60 20.80,38.60
+						22.62,41.44 20.58,45.18 17.20,45.18
+						17.20,45.18 17.20,45.18 17.20,45.18
+						15.77,45.18 14.43,44.46 13.64,43.26
+						13.64,43.26 1.82,25.34 1.82,25.34 Z" />
+				</svg>
+			</div>
+			<div id='f4' class='flash' style='grid-area: d;'>
+				<div id='g4'>
+					<p>Flags</p>
+					<div class='progBar'>
+						<div></div>
+					</div>
+				</div>
+			</div>
+			<div id='f5' class='flash' style='grid-area: e;'>
+				<div id='g5'>
+					<p>Aural</p>
+					<div class='progBar'>
+						<div></div>
+					</div>
+				</div>
+			</div>
+			<div id='f6' class='flash' style='grid-area: f;'>
+				<div id='g6'>
+					<p>Sheet</p>
+					<div class='progBar'>
+						<div></div>
+					</div>
+				</div>
+			</div>
+			<div id='rightArrow' class='arrow' style='grid-area: k;'>
+				<svg xmlns="http://www.w3.org/2000/svg" width="0.244444in" height="0.511111in" viewBox="0 -1 22 47">
+					<path
+					d=	"M 20.18,20.66
+						C 21.29,22.33 21.29,24.50 20.18,26.17
+						20.18,26.17 8.36,44.08 8.36,44.08
+						7.57,45.28 6.23,46.00 4.80,46.00
+						1.42,46.00 -0.62,42.27 1.20,39.42
+						1.20,39.42 9.73,26.11 9.73,26.11
+						10.78,24.46 10.78,22.36 9.73,20.72
+						9.73,20.72 1.20,7.40 1.20,7.40
+					    -0.62,4.56 1.42,0.82 4.80,0.82
+						6.23,0.82 7.57,1.54 8.36,2.74
+						8.36,2.74 20.18,20.66 20.18,20.66 Z" />
+				</svg>
+			</div>
+			<div id='f7' class='flash' style='grid-area: g;'>
+				<div id='g7'>
+					<p>Algebra</p>
+					<div class='progBar'>
+						<div></div>
+					</div>
+				</div>
+			</div>
+			<div id='f8' class='flash' style='grid-area: h;'>
+				<div id='g8'>
+					<p>Declensions</p>
+					<div class='progBar'>
+						<div></div>
+					</div>
+				</div>
+			</div>
+			<div id='f9' class='flash' style='grid-area: i;'>
+				<div id='g9'>
+					<p>Formulas</p>
+					<div class='progBar'>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="music">
+				<div class="album">
+					<img id="imgVisible" src="http://i.scdn.co/image/76fa4ea5ea3bec3b2f574d0b98c5ca698b33698c"></img>
+					<img id="imgBlur" src="http://i.scdn.co/image/76fa4ea5ea3bec3b2f574d0b98c5ca698b33698c"></img>
+				</div>
+				<div class='notAlbum'>
+					<div class="songInfo">
+						<p id="songName">Baby I Don't Know Oh Oh</p>
+						<p id="artistName">Vulfpeck</p>
+					</div>
+					<div class="control">
+						<div id="prev">
+							 <svg viewBox='0 0 100 173.2'>
+								<path d="M37.5,21.65 Q50,0 62.5,21.65 L87.5,64.95 Q100,86.6 75,86.6 L25,86.6 Q0,86.6 12.5,64.95 Z
+	      M37.5,108.25 Q50,86.6 62.5,108.25 L87.5,151.55 Q100,173.2 75,173.2 L25,173.2 Q0,173.2 12.5,151.55 Z"/>
+							</svg>
+						</div>
+						<div class="play">
+							<div id="playLeft"></div>
+							<div id="playRight"></div>
+						</div>
+						<div id="next">
+							 <svg viewBox='0 0 100 173.2'>
+								<path d="M37.5,21.65 Q50,0 62.5,21.65 L87.5,64.95 Q100,86.6 75,86.6 L25,86.6 Q0,86.6 12.5,64.95 Z
+	      M37.5,108.25 Q50,86.6 62.5,108.25 L87.5,151.55 Q100,173.2 75,173.2 L25,173.2 Q0,173.2 12.5,151.55 Z"/>
+							</svg>
+						</div>
+					</div>
+					<div class="seek">
+						<p id="passed">0:00</p>
+						<div id="seekBackground">
+							<div id="seekForeground"></div>
+						</div>
+						<p id="total">3:36</p>
+					</div>
+				</div>
+			</div>
+		<div class='calendar'>
+
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "calendar",
+  "version": "1.0.0",
+  "description": "Calendar",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Joseph",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^2.0.2"
+  }
+}

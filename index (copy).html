@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="scripts.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+</head>
+
+<body onload="startTime()">
+	<div class="gridContainer">
+		<div class="sidebar">
+			<div class="time">
+				<div class="clock">
+					<p id="hr"></p>
+					<p id="colon">:</p>
+					<p id="min"></p>
+				</div>
+				<p id="date"></p>
+			</div>
+			<div class="music">
+				<div class="album">
+					<img id="imgVisible" src="http://i.scdn.co/image/76fa4ea5ea3bec3b2f574d0b98c5ca698b33698c"></img>
+					<img id="imgBlur" src="http://i.scdn.co/image/76fa4ea5ea3bec3b2f574d0b98c5ca698b33698c"></img>
+				</div>
+				<div class="songInfo">
+					<p id="songName">Baby I Don't Know Oh Oh</p>
+					<p id="artistName">Vulfpeck</p>
+				</div>
+				<div class="seek">
+					<p id="passed">0:00</p>
+					<div class="seekBar">
+						<div id="seekBackground"></div>
+						<div id="seekForeground"></div>
+					</div>
+					<p id="total">3:36</p>
+				</div>
+				<div class="control">
+					<div id="prev">
+						 <svg viewBox='0 0 100 173.2'>
+							<path d="M37.5,21.65 Q50,0 62.5,21.65 L87.5,64.95 Q100,86.6 75,86.6 L25,86.6 Q0,86.6 12.5,64.95 Z
+      M37.5,108.25 Q50,86.6 62.5,108.25 L87.5,151.55 Q100,173.2 75,173.2 L25,173.2 Q0,173.2 12.5,151.55 Z"/>
+						</svg>
+					</div>
+					<div class="play">
+						<div id="left"></div>
+						<div id="right"></div>
+					</div>
+					<div id="next">
+						 <svg viewBox='0 0 100 173.2'>
+							<path d="M37.5,21.65 Q50,0 62.5,21.65 L87.5,64.95 Q100,86.6 75,86.6 L25,86.6 Q0,86.6 12.5,64.95 Z
+      M37.5,108.25 Q50,86.6 62.5,108.25 L87.5,151.55 Q100,173.2 75,173.2 L25,173.2 Q0,173.2 12.5,151.55 Z"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="calView">
+			
+		</div>
+	</div>
+</body>
+</html>
